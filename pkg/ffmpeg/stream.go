@@ -40,6 +40,8 @@ type StreamManagerConfig interface {
 	GetLiveTranscodeInputArgs() []string
 	GetLiveTranscodeOutputArgs() []string
 	GetTranscodeHardwareAcceleration() bool
+	GetTranscodeFullHardwareAcceleration() bool
+	GetAlwaysAddHardwareDecoding() bool
 }
 
 func NewStreamManager(cacheDir string, encoder *FFMpeg, ffprobe FFProbe, config StreamManagerConfig, lockManager *fsutil.ReadLockManager) *StreamManager {
